@@ -1,0 +1,39 @@
+﻿@model AppUser
+
+<div class="container mt-4">
+    <h2>Profil</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Email
+        </dd>
+        <dt class="col-sm-2">
+            Ad
+        </dt>
+        <dd class="col-sm-10">
+            @Model.FirstName
+        </dd>
+        <dt class="col-sm-2">
+            Soyad
+        </dt>
+        <dd class="col-sm-10">
+            @Model.LastName
+        </dd>
+    </dl>
+    <h3>Makaleler</h3>
+    <ul>
+        @foreach (var article in Model.Articles)
+        {
+            <li>
+                <h3>@article.Title</h3>
+                <p>@article.Content</p>
+                
+            
+            
+            </li>
+        }
+    </ul>
+</div>
